@@ -1,0 +1,47 @@
+<div class="edit-page">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <i class="fa fa-home" style="font-size:22px;cursor: pointer;" (click)='goBack()'></i> > <li class="breadcrumb-item active" aria-current="page">{{restaurantDetail.name}}</li>
+      </ol>
+    </nav>
+    <div class="page-content">
+      <div class="row">
+        <div class="col col-md-4">
+          <img class="img-avatar" [src]="restaurantDetail.logo">
+            {{restaurantDetail.description}}
+        </div>
+        <div class="col col-md-8">
+           <div>
+            <agm-map
+            [latitude]='lat'
+            [longitude]='long'
+            [mapTypeId]='mapType'
+            fullscreenControl = 'true'
+            (markerClick)="selectMarker($event)"
+            [streetViewControl]="false"
+            [zoom]="15"
+            (mapClick)="addMarker($event.coords.lat, $event.coords.lng)"
+            >
+        <agm-marker
+            *ngFor="let marker of markers"
+            [latitude]="marker.lat"
+            [longitude]="marker.lng"
+            [opacity]="marker.alpha"
+            [markerDraggable]="true"
+            (markerClick)="selectMarker($event)"
+        >
+        </agm-marker>
+        <agm-rectangle
+            [north]="max('lat')"
+            [east]="max('lng')"
+            [south]="min('lat')"
+            [west]="min('lng')"
+        >
+        </agm-rectangle>
+            </agm-map>
+           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
