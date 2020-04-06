@@ -5,13 +5,13 @@
 export const environment = {
   production: false,
   firebase: {
-    apiKey: 'AIzaSyByVbu6DlXMD5e4zB_lu5IU5-4__7UxyYc',
-    authDomain: 'restaurantproject-16340.firebaseapp.com',
-    databaseURL: 'https://restaurantproject-16340.firebaseio.com',
-    projectId: 'restaurantproject-16340',
-    storageBucket: 'restaurantproject-16340.appspot.com',
-    messagingSenderId: '469737384244',
-    appId: '1:469737384244:web:94a8563f2da791d0831d61'
+    apiKey: 'XXXXX',
+    authDomain: 'projectid.firebaseapp.com',
+    databaseURL: 'https://projectid.firebaseio.com',
+    projectId: 'XXXXXX',
+    storageBucket: 'projectid.appspot.com',
+    messagingSenderId: 'SENDERID',
+    appId: 'XXXXX'
   }
 };
 
