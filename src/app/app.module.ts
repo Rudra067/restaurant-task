@@ -43,7 +43,7 @@ import { MapsAPILoader } from '@agm/core';
     MatDialogModule,
     HttpClientModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyAR_S2FNyZx2yewwCwv3Z48X3bE6sy_t1k'
+      apiKey: 'GOOGLEMAP_API_KEY'
     })
   ],
   providers: [FirebaseService, ViewRestaurantrResolver],
